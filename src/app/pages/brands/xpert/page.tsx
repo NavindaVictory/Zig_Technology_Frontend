@@ -1,26 +1,10 @@
-"use client"
 import Head from "next/head";
 import Image from "next/image";
 import Link from 'next/link';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { useRouter } from 'next/navigation';
 
-export default function Brands() {
-
-    const router = useRouter();
-
-    const handleXpertClick = () => {
-        router.push('/pages/brands/xpert');
-    }
-
-    const handleOmsClick = () => {
-        router.push('/pages/brands/oms');
-    }
-
-    const handleOnesamClick = () => {
-        router.push('/pages/brands/onesam');
-    }
+export default function XPert() {
 
     return (
         <div className="min-h-screen flex flex-col">
@@ -81,6 +65,14 @@ export default function Brands() {
                                         Our Brands
                                     </Link>
                                 </li>
+                                <li>
+                                    <span className="text-blue-500">/</span>
+                                </li>
+                                <li>
+                                    <Link href="#" className="text-blue-500 hover:underline">
+                                        X-Pert
+                                    </Link>
+                                </li>
                             </ol>
                         </nav>
                         {/* Heading */}
@@ -111,56 +103,6 @@ export default function Brands() {
                                     </div>
                                 </div>
                                 <h3 className="text-gray-400 text-xl font-medium mb-4">
-                                    OMS
-                                </h3>
-                                <p className="text-gray-600 p-4">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                </p>
-                                <button className="border-solid border-2 border-gray-400 p-2 rounded-2xl w-auto text-gray-400 mt-2 hover:bg-gray-200 hover:cursor-pointer hover:ring-2 hover:scale-110 duration-300" onClick={handleOmsClick}>
-                                    Read More
-                                </button>
-                            </div>
-                            <div className="w-0.5 bg-gray-200 mx-2 h-48 mt-10"></div>
-                            {/* ONESAM */}
-                            <div className="flex-1 text-center px-4">
-                                <div className="flex justify-center mb-4">
-                                    <div className="w-24 h-24 relative">
-                                        <Image
-                                            src="/images/vision.jpg"
-                                            alt="Vision Icon"
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                </div>
-                                <h3 className="text-gray-600 text-2xl font-medium mb-4">
-                                    ONESAM
-                                </h3>
-                                <p className="text-gray-600 p-4">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                </p>
-                                <button className="border-solid border-2 border-gray-400 p-2 rounded-2xl w-auto text-gray-400 mt-2 hover:bg-gray-200 hover:cursor-pointer hover:ring-2 hover:scale-110 duration-300" onClick={handleOnesamClick}>
-                                    Read More
-                                </button>
-                            </div>
-                            <div className="w-0.5 bg-gray-200 mx-2 h-48 mt-10"></div>
-                            {/* X-PERT */}
-                            <div className="flex-1 text-center">
-                                <div className="flex justify-center mb-4">
-                                    <div className="w-24 h-24 relative">
-                                        <Image
-                                            src="/images/mission.jpg"
-                                            alt="Mission Icon"
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                </div>
-                                <h3 className="text-gray-600 text-2xl font-medium mb-4 ">
                                     X-PERT
                                 </h3>
                                 <p className="text-gray-600 p-4">
@@ -168,11 +110,12 @@ export default function Brands() {
                                     nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
                                     erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
                                 </p>
-                                <button className="border-solid border-2 border-gray-400 p-2 rounded-2xl w-auto text-gray-400 mt-2 hover:bg-gray-200 hover:cursor-pointer hover:ring-2 hover:scale-110 duration-300" onClick={handleXpertClick}>
+                                <button className="border-solid border-2 border-gray-400 p-2 rounded-2xl w-auto text-gray-400 mt-2 hover:bg-gray-200 hover:cursor-pointer hover:ring-2">
                                     Read More
                                 </button>
                             </div>
                             <div className="w-0.5 bg-gray-200 mx-2 h-48 mt-10"></div>
+
                         </div>
                     </div>
                 </div>

@@ -14,8 +14,8 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row">
           {/* Left side - Social Media */}
-          <div className="bg-gray-200 p-4 rounded-md inline-flex items-center">
-            <span className="text-gray-500 font-medium mr-2">FOLLOW US ON</span>
+          <div className="bg-gray-200 p-4 rounded-md flex flex-col items-center">
+            <span className="text-gray-500 font-medium mr-2 mb-2">FOLLOW US ON</span>
             <div className="flex gap-2">
               <a
                 href="#"
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Center - Company Name */}
-          <div className="flex-grow text-center justify-center my-4 md:my-0">
+          <div className="flex-grow text-center justify-center my-4 md:my-0 content-center">
             <div className="inline-flex items-center">
               <span className="text-xl text-gray-500">Zigo Technology</span>
               <span className="text-gray-500 ml-2">All Rights Reserved ©</span>
@@ -56,8 +56,8 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Right side - Navigation links */}
-          <div className="flex flex-wrap justify-center gap-x-6">
-            <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-wrap justify-center gap-x-6 content-center">
+            <div className="flex flex-col items-center gap-y-2 md:items-start">
               <a href="#" className="text-gray-400 hover:text-white">
                 Home
               </a>
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                 OMS
               </a>
             </div>
-            <div className="flex flex-col items-center md:items-start">
+            <div className="flex flex-col items-center gap-y-2 md:items-start">
               <a href="#" className="text-gray-400 hover:text-white">
                 About Us
               </a>
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
                 ONESAM
               </a>
             </div>
-            <div className="flex flex-col items-center md:items-start">
+            <div className="flex flex-col items-center gap-y-2 md:items-start">
               <a href="#" className="text-gray-400 hover:text-white">
                 Our Brands
               </a>
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
                 X-PERT
               </a>
             </div>
-            <div className="flex flex-col items-center md:items-start">
+            <div className="flex flex-col items-center gap-y-2 md:items-start">
               <a href="#" className="text-gray-400 hover:text-white">
                 Production
               </a>
