@@ -149,12 +149,14 @@ export default function Home() {
                         <div className="mb-12">
                             <div className="max-w-4xl mx-auto text-gray-600 space-y-4 text-left">
                                 <p>
-                                    Zigo Technology (PVT) Ltd is a leading company in the
-                                    manufacturing, importation, export, and distribution of mobile
-                                    phone accessories, spare parts, and electrical equipment in
-                                    Sri Lanka. We are the proud owner of the OMS brand (OMS Mobile
-                                    Phone Accessories) and serve as the exclusive distributor for
-                                    Oneam, Xpert, and Envy in the mobile accessory sector.
+                                    Zigo Technology (Private) Limited is a premier industry leader in the manufacturing, exportation, importation, and distribution of high-quality mobile phone accessories, repair parts, and electrical equipment. As the exclusive owner of the OMS brand (OMS Mobile Phone Accessories) and the sole distributor of Onesam and Xpert, we are committed to delivering cutting-edge solutions that enhance mobile connectivity and user experience. With the establishment of our state-of-the-art manufacturing facility in Sri Lanka in 2019, we have expanded our production capabilities to manufacture premium mobile accessories that meet international quality standards. Our strong export operations enable us to supply OEM and branded accessories to global markets, strengthening our presence across China (PRC), Thailand, Singapore, Bangladesh, India, and beyond.
+                                </p>
+
+                                <p>
+                                    Since our inception in 2006 and formal incorporation in 2014, Zigo Technology has continuously evolved, driven by a passion for innovation, efficiency, and excellence. Our ability to manufacture and export high-quality mobile accessories has positioned us as a trusted global supplier, ensuring seamless distribution and accessibility across international markets.
+                                </p>
+                                <p>
+                                    At Zigo Technology, our commitment to technological advancement and superior manufacturing standards remains the driving force behind our success. By maintaining a robust distribution network and a relentless focus on quality, we continue to set new benchmarks in the mobile accessories industry.
                                 </p>
 
                                 <p>
@@ -196,9 +198,7 @@ export default function Home() {
                                     OUR VISION
                                 </h3>
                                 <p className="text-gray-600">
-                                    To become the most famous mobile phone accessory
-                                    <br />
-                                    and electronic equipment brand of the world at 2030.
+                                    To become the world’s leading brand in mobile accessories and electronic equipment, recognized for innovation, superior quality and exceptional customer experience.
                                 </p>
                             </div>
 
@@ -218,9 +218,7 @@ export default function Home() {
                                     OUR MISSION
                                 </h3>
                                 <p className="text-gray-600">
-                                    Provide high-quality mobile phone accessories and
-                                    <br />
-                                    electronic equipment for customers around the globe.
+                                    To deliver premium mobile accessories and electronic equipment to customers worldwide, ensuring quality, innovation and customer satisfaction.
                                 </p>
                             </div>
                         </div>
