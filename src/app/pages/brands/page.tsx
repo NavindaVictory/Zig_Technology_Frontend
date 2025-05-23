@@ -64,7 +64,7 @@ export default function Brands() {
                 </div>
 
                 <div className="bg-white py-6">
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto px-4 mb-20">
                         {/* Breadcrumb */}
                         <nav aria-label="Breadcrumb" className="p-5">
                             <ol className="flex space-x-2">

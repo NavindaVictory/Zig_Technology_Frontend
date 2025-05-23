@@ -78,21 +78,15 @@ export default function XPert() {
                         {/* Heading */}
                         <div className="flex flex-col items-center">
                             <div className="mt-2 border-t border-blue-400 w-11/12"></div>
-                            <div className="p-20">
-                                <h1 className="text-gray-400 font-bold text-4xl w-full content-center">
-                                    OUR BRANDS
-                                </h1>
-                            </div>
-                            <div className=" border-t border-blue-400 w-11/12"></div>
                         </div>
 
                         {/* brands */}
                         <div className="flex flex-col md:flex-row justify-between mt-10">
                             {/* Vertical line */}
-                            <div className="w-0.5 bg-gray-200 mx-2 h-48 mt-10"></div>
-                            {/* OMS */}
-                            <div className="flex-1 text-center px-4">
-                                <div className="flex justify-center mb-4">
+                            <div className="w-0.5 bg-gray-200 mx-2 h-1vh mt-10"></div>
+                            {/* X-PERT */}
+                            <div className="flex-1 text-center p-6 justify-center">
+                                <div className="flex justify-start mb-4">
                                     <div className="w-24 h-24 relative">
                                         <Image
                                             src="/images/vision.jpg"
@@ -102,19 +96,104 @@ export default function XPert() {
                                         />
                                     </div>
                                 </div>
-                                <h3 className="text-gray-400 text-xl font-medium mb-4">
-                                    X-PERT
-                                </h3>
-                                <p className="text-gray-600 p-4">
+                                <div className="flex justify-start px-2">
+                                    <h3 className="text-gray-400 text-xl font-medium mb-4">
+                                        X-PERT
+                                    </h3>
+                                </div>
+                                <p className="text-gray-600 p-4 max-w-auto text-justify">
+
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+
+                                </p>
+
+                                <p className="text-gray-600 p-4 max-w-auto text-justify">
+
+
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+
+                                </p>
+                                <p className="text-gray-600 p-4 max-w-auto text-justify">
+
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
                                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                                     nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
                                     erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
                                 </p>
-                                <button className="border-solid border-2 border-gray-400 p-2 rounded-2xl w-auto text-gray-400 mt-2 hover:bg-gray-200 hover:cursor-pointer hover:ring-2">
-                                    Read More
-                                </button>
+                                <div>
+                                    <div className="flex flex-col items-center">
+                                        <div className="p-20">
+                                            <h1 className="text-gray-400 font-bold text-4xl w-full content-center">
+                                                Products
+                                            </h1>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row">
+                                        <div>
+                                            <img src="/images/products/pro1.png" alt="product 1" />
+                                        </div>
+                                        <div>
+                                            <img src="/images/products/pro2.png" alt="product 2" />
+                                        </div>
+                                        <div>
+                                            <img src="  /images/products/pro3.png" alt="product 3" />
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row">
+                                        <div>
+                                            <img src="/images/products/pro4.png" alt="product 1" />
+                                        </div>
+                                        <div>
+                                            <img src="/images/products/pro3.png" alt="product 2" />
+                                        </div>
+                                        <div>
+                                            <img src="  /images/products/pro2.png" alt="product 3" />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="w-0.5 bg-gray-200 mx-2 h-48 mt-10"></div>
+                            <div className="w-0.5 bg-gray-200 mx-2 h-1vh mt-10"></div>
 
                         </div>
                     </div>
