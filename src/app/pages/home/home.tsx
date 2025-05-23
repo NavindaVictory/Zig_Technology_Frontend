@@ -290,12 +290,12 @@ export default function Home() {
 
                 <div className="bg-white py-10 flex flex-col items-center">
                     <div className="border-t border-blue-400 w-11/12"></div>
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto">
                         <h2 className="text-gray-500 text-4xl font-medium text-center mb-12 pt-12">
                             MILESTONES
                         </h2>
                         <div className="flex flex-col items-center mb-10 ">
-                            <div className="relative h-lvh w-lvw">
+                            <div className="relative h-[400px] w-lvw">
                                 {/* SVG Graph Path */}
                                 <svg
                                     viewBox="0 0 1200 400"
@@ -330,7 +330,7 @@ export default function Home() {
                                         { x: 900, y: 220, year: "2016", label: "LAUNCH THE ONESAM BRAND" },
                                         { x: 1030, y: 150, year: "2019", label: "MANUFACTURING PLANT STARTED" },
                                         { x: 1150, y: 50, year: "2020", label: "EXPLORE INDONESIAN MARKET" },
-                                        { x: 1150, y: 50, year: "2022", label: "EXPLORE UAE MARKET" },
+                                        { x: 1170, y: 40, year: "2022", label: "EXPLORE UAE MARKET" },
                                     ].map((milestone, i) => (
                                         <g key={i} className='group'>
                                             {/* Bubble */}

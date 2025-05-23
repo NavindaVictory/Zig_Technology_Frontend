@@ -57,7 +57,7 @@ const Navbar = () => {
                             <Link
                                 key={item.name}
                                 href={item.path}
-                                className="text-white hover:text-blue-200 px-3 py-2 flex items-center"
+                                className="text-white text-[0.95rem] hover:text-blue-200 px-3 py-2 flex items-center"
                             >
                                 {item.name}
                                 <svg
