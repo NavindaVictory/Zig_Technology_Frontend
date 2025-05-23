@@ -290,77 +290,18 @@ export default function Home() {
 
                 <div className="bg-white py-10 flex flex-col items-center">
                     <div className="border-t border-blue-400 w-11/12"></div>
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto">
                         <h2 className="text-gray-500 text-4xl font-medium text-center mb-12 pt-12">
                             MILESTONES
                         </h2>
-                        <div className="flex flex-col items-center mb-10">
-                            <div className="relative h-[400px] w-9/12 pt-5">
+                        <div className="flex flex-col items-center mb-10 ">
+                            <div className="relative h-[400px] w-lvw">
                                 {/* SVG Graph Path */}
                                 <svg
                                     viewBox="0 0 1200 400"
-                                    className="absolute w-full h-full p-5"
-                                    preserveAspectRatio="none"
+                                    className="absolute w-full h-full"
+                                    preserveAspectRatio="xMidYMid meet"
                                 >
-                                    <path
-                                        d="M150,350 C500,350 900,300,1150,50"
-                                        fill="none"
-                                        stroke="#3B82F6"
-                                        strokeWidth="3"
-                                    />
-                                    {/* Milestone Bubbles */}
-                                    {[
-                                        { x: 150, y: 350, year: "2006", label: "Founded the company" },
-                                        { x: 300, y: 345, year: "2014", label: "Incorporated the company" },
-                                        { x: 450, y: 334, year: "2014", label: "Incorporated the company" },
-                                        { x: 600, y: 310, year: "2016", label: "Started Dealer Network" },
-                                        { x: 750, y: 265, year: "2019", label: "Launched Onesam" },
-                                        { x: 900, y: 202, year: "2020", label: "Factory Started" },
-                                        { x: 1050, y: 100, year: "2022", label: "Entered Indonesia" },
-                                        { x: 1150, y: 50, year: "2023", label: "Entered UAE" },
-                                    ].map((milestone, i) => (
-                                        <g key={i} className='group'>
-
-                                            {/* Year */}
-                                            <text
-                                                x={milestone.x}
-                                                y={milestone.y - 15}
-                                                textAnchor="middle"
-                                                className="fill-blue-700 text-sm font-semibold"
-                                            >
-                                                {milestone.year}
-                                            </text>
-                                            {/* Tooltip */}
-                                            <g className='opacity-0 group-hover:opacity-100 transition-opacity'>
-                                                {/* Bubble */}
-                                                <circle
-                                                    cx={milestone.x}
-                                                    cy={milestone.y}
-                                                    r="12"
-                                                    className="fill-blue-200 stroke-blue-200 stroke-2 cursor-pointer group hover:fill-blue-500 hover:stroke-blue-400 hover:cursor-pointer duration-200 ease-in-out"
-                                                />
-                                                <foreignObject
-                                                    x={milestone.x - 75}
-                                                    y={milestone.y - 290}
-                                                    width="150"
-                                                    height="50"
-                                                    className="opacity-0 hover:opacity-100 transition-opacity duration-300"
-                                                >
-                                                    <div className="bg-white text-blue-600 text-xs text-center font-medium shadow-lg border rounded p-2 pointer-events-none">
-                                                        {milestone.label}
-                                                    </div>
-                                                </foreignObject>
-                                                {/* Arrow */}
-                                                <path
-                                                    d={`M${milestone.x},${milestone.y - 250} L${milestone.x},${milestone.y - 60}`}
-                                                    stroke="#3B82F6"
-                                                    strokeWidth="2"
-                                                    markerEnd="url(#arrowhead)"
-                                                />
-                                            </g>
-                                        </g>
-                                    ))}
-                                    {/* Define Arrowhead Marker */}
                                     <defs>
                                         <marker
                                             id="arrowhead"
@@ -370,9 +311,90 @@ export default function Home() {
                                             refY="3.5"
                                             orient="auto"
                                         >
-                                            <polygon points="0 0, 10 3.5, 0 7" fill="#3B82F6" />
+                                            <polygon points="0 0, 5 3.5, 0 7" fill="#3B82F6" />
                                         </marker>
                                     </defs>
+                                    <path
+                                        d="M150,350 C500,350 900,300,1150,50"
+                                        fill="none"
+                                        stroke="#3B82F6"
+                                        strokeWidth="2"
+                                    />
+                                    {/* Milestone Bubbles */}
+                                    {[
+                                        { x: 150, y: 350, year: "2006", label: "FOUND THE COMPANY" },
+                                        { x: 300, y: 345, year: "2014", label: "INCORPORATE THE COMPANY" },
+                                        { x: 450, y: 334, year: "2014", label: "INITIATE THE STRATEGIC RELATION WITH CHINESE BUSINESS PARTNERS" },
+                                        { x: 600, y: 310, year: "2014", label: "LAUNCH OMS BRAND TO THE SRILANKA MARKET" },
+                                        { x: 750, y: 275, year: "2015", label: "START DEALER NETWORK OPERATION" },
+                                        { x: 900, y: 220, year: "2016", label: "LAUNCH THE ONESAM BRAND" },
+                                        { x: 1030, y: 150, year: "2019", label: "MANUFACTURING PLANT STARTED" },
+                                        { x: 1150, y: 50, year: "2020", label: "EXPLORE INDONESIAN MARKET" },
+                                        { x: 1170, y: 40, year: "2022", label: "EXPLORE UAE MARKET" },
+                                    ].map((milestone, i) => (
+                                        <g key={i} className='group'>
+                                            {/* Bubble */}
+                                            <circle
+                                                cx={milestone.x}
+                                                cy={milestone.y}
+                                                r="12"
+                                                className="fill-blue-200 stroke-blue-200 stroke-2 cursor-pointer group hover:fill-blue-500 hover:stroke-blue-400 hover:cursor-pointer duration-200 ease-in-out"
+                                            />
+                                            {/* Year */}
+                                            <text
+                                                x={milestone.x}
+                                                y={milestone.y - 15}
+                                                textAnchor="middle"
+                                                className="fill-blue-700 text-sm font-semibold"
+                                            >
+                                                {milestone.year}
+                                            </text>
+                                            {/* Tooltip Group */}
+                                            <g className="opacity-0 group-hover:opacity-100 transition-opacity duration-1000 w-auto">
+                                                {/* Arrow */}
+                                                <path
+                                                    d={`M${milestone.x},${milestone.y - 200} L${milestone.x},${milestone.y - 60}`}
+                                                    stroke="#3B82F6"
+                                                    strokeWidth="2"
+                                                    markerEnd="url(#arrowhead)"
+                                                />
+                                                {/* Tooltip Background */}
+                                                <rect
+                                                    x={milestone.x - 75}
+                                                    y={milestone.y - 150}
+                                                    // width="100%"
+                                                    height="40"
+                                                    rx="5"
+                                                    ry="5"
+                                                    fill="white"
+                                                    stroke="#3B82F6"
+                                                    strokeWidth="1"
+                                                />
+                                                {/* Tooltip Text */}
+                                                <text
+                                                    x={milestone.x}
+                                                    y={milestone.y - 210}
+                                                    textAnchor="middle"
+                                                    className="fill-blue-600 text-xs font-medium p-2 border-blue-600 w-auto"
+                                                >
+                                                    {milestone.label}
+                                                </text>
+                                            </g>
+                                        </g>
+                                    ))}
+                                    {/* Define Arrowhead Marker
+                                    <defs>
+                                        <marker
+                                            id="arrowhead"
+                                            markerWidth="10"
+                                            markerHeight="7"
+                                            refX="0"
+                                            refY="3.5"
+                                            orient="auto"
+                                        >
+                                            <polygon points="0 0, 5 3.5, 0 7" fill="#3B82F6" />
+                                        </marker>
+                                    </defs> */}
                                 </svg>
                             </div>
                         </div>
