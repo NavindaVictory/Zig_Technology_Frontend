@@ -222,6 +222,121 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
+
+                        <div className="flex flex-col items-center">
+                            <div className="mt-8 border-t border-blue-400 w-11/12"></div>
+                        </div>
+
+                        {/* Core Values */}
+                        <div className="grid gap-6 sm:gap-8 mt-15">
+                            <h2 className="text-gray-500 text-4xl font-medium text-center mb-6">
+                                Core Values
+                            </h2>
+                            {/* 1 */}
+                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow duration-300">
+                                <div className="flex items-start gap-4">
+                                    <div className="flex-grow">
+                                        <h4 className="font-bold text-blue-800 text-base sm:text-lg mb-2">
+                                            Quality & Innovation
+                                        </h4>
+                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                            We prioritize high quality materials and cutting-edge technology to create durable, innovative accessories that enhance user experience.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* 2 */}
+                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-green-600 hover:shadow-lg transition-shadow duration-300">
+                                <div className="flex items-start gap-4">
+
+                                    <div className="flex-grow">
+                                        <h4 className="font-bold text-green-800 text-base sm:text-lg mb-2">
+                                            Customer – Centric Approach
+                                        </h4>
+                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                            Our customers are at the heart of everything we do. We strive to exceed expectations with exceptional service, reliability and value.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* 3 */}
+                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-purple-600 hover:shadow-lg transition-shadow duration-300">
+                                <div className="flex items-start gap-4">
+
+                                    <div className="flex-grow">
+                                        <h4 className="font-bold text-purple-800 text-base sm:text-lg mb-2">
+                                            Sustainability & Responsibility
+                                        </h4>
+                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-3">
+                                            We are committed to eco friendly manufacturing reducing waste, and ensuring responsible sourcing of materials
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* 4 */}
+                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-red-600 hover:shadow-lg transition-shadow duration-300">
+                                <div className="flex items-start gap-4">
+
+                                    <div className="flex-grow">
+                                        <h4 className="font-bold text-red-800 text-base sm:text-lg mb-2">
+                                            Integrity and Transparency
+                                        </h4>
+                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                            We conduct business with honesty, fairness and transparency, building trust with customers, partners and stakeholders
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* 5 */}
+                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-yellow-600 hover:shadow-lg transition-shadow duration-300">
+                                <div className="flex items-start gap-4">
+
+                                    <div className="flex-grow">
+                                        <h4 className="font-bold text-yellow-800 text-base sm:text-lg mb-2">
+                                            Global Reach, Local Commitment
+                                        </h4>
+                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                            While we operate globally, we remain dedicated to understanding and meeting the unique needs of local markets
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* 6 */}
+                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-indigo-600 hover:shadow-lg transition-shadow duration-300">
+                                <div className="flex items-start gap-4">
+                                  
+                                    <div className="flex-grow">
+                                        <h4 className="font-bold text-indigo-800 text-base sm:text-lg mb-2">
+                                            Continuous Improvement
+                                        </h4>
+                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                            We embrace change, adapt to new trends and continuously improve our products and processes to stay ahead in the industry.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* 7 */}
+                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-teal-600 hover:shadow-lg transition-shadow duration-300">
+                                <div className="flex items-start gap-4">
+
+                                    <div className="flex-grow">
+                                        <h4 className="font-bold text-teal-800 text-base sm:text-lg mb-2">
+                                            Strong Partnerships
+                                        </h4>
+                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                            We believe in fostering long-term relationships with suppliers, distributors and retailers to create a strong and sustainable supply chain.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div className="flex flex-col items-center">
                             <div className="mt-8 border-t border-blue-400 w-11/12"></div>
                         </div>
