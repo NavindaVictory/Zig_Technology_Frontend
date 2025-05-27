@@ -1,9 +1,13 @@
+"use client";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Production() {
+  const router = useRouter();
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
@@ -33,7 +37,7 @@ export default function Production() {
 
           <div className="relative z-10 container mx-auto px-4 sm:px-8 md:px-16 py-8 sm:py-12 md:py-16 text-start text-white">
             {/* Header text */}
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 mt-3">
               PRODUCTION AND DISTRIBUTION
             </h1>
 
@@ -49,220 +53,226 @@ export default function Production() {
             </p>
           </div>
         </div>
-        <div className="mt-12 sm:mt-24 md:mt-48 border-t border-blue-400"></div>
 
         {/* Manufacturing Plant Section */}
-        <div className="bg-white py-8 sm:py-12">
+        <div className="bg-white py-8 sm:py-12 mt-2 md:mt-20">
+          {/* Breadcrumb */}
+          <nav
+            aria-label="Breadcrumb"
+            className="container mx-auto px-4 sm:px-8 md:px-16 pt-4 pb-2"
+          >
+            <ol className="flex items-center space-x-2 text-sm sm:text-base">
+              <li>
+                <Link
+                  href="/"
+                  className="text-blue-500 hover:text-blue-700 hover:underline transition-colors"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <span className="text-gray-400 mx-1">/</span>
+              </li>
+              <li>
+                <Link
+                  href="/pages/production"
+                  className="text-blue-500 hover:text-blue-700 hover:underline transition-colors"
+                >
+                  Production
+                </Link>
+              </li>
+            </ol>
+          </nav>
+
+          {/* Decorative Line */}
           <div className="container mx-auto px-4 sm:px-8 md:px-16">
-            <div className="py-4">
-              <div className="flex flex-col items-start">
-                <div className="mb-6 sm:mb-10 flex flex-col sm:flex-row items-start sm:items-center sm:gap-6 ml-[-12]">
-                  <h2 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl font-extrabold text-start">
-                    M A N U F A C T U R I N G
-                  </h2>
-                  <h2 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl font-extrabold text-start">
-                    P L A N T
-                  </h2>
-                </div>
+            <div className="h-[3px] w-full bg-blue-200 rounded-md"></div>
+          </div>
 
-                {/* Manufacturing Plant Image */}
-                <div className="w-full relative h-48 sm:h-64 md:h-96 mb-8 sm:mb-10">
-                  <Image
-                    src="/images/manufaturing_plant.jpg"
-                    alt="Zigo Technology Manufacturing Plant"
-                    fill
-                    className="object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-
-                {/* Manufacturing Process Content */}
-                <div className="w-full rounded-2xl p-6 sm:p-8 md:p-10">
-                  <div className="mb-6">
-                    <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                      <span className="font-semibold text-blue-800">
-                        The manufacturing process{" "}
-                      </span>
-                      is a systematic approach to transforming raw materials
-                      into finished products through various stages of
-                      production. The process typically involves several key
-                      steps to ensure efficiency, quality, and consistency.
-                      Below is a general outline of the
-                      <span className="font-semibold text-blue-800">
-                        {" "}
-                        manufacturing process:
-                      </span>
-                    </p>
+          <div className="bg-white py-8 sm:py-12">
+            <div className="container mx-auto px-4 sm:px-8 md:px-16">
+              <div className="py-4">
+                <div className="flex flex-col items-start">
+                  <div className="mb-6 sm:mb-10 flex flex-col sm:flex-row items-start sm:items-center sm:gap-6 ml-[-12]">
+                    <h2 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl font-extrabold text-start">
+                      M A N U F A C T U R I N G
+                    </h2>
+                    <h2 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl font-extrabold text-start">
+                      P L A N T
+                    </h2>
                   </div>
 
-                  {/* Process Steps Grid */}
-                  <div className="grid gap-6 sm:gap-8">
-                    {/* Step 1 */}
-                    <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow duration-300">
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
-                          1
-                        </div>
-                        <div className="flex-grow">
-                          <h4 className="font-bold text-blue-800 text-base sm:text-lg mb-2">
-                            PRODUCT DESIGN & DEVELOPMENT
-                          </h4>
-                          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                            Before manufacturing begins, engineers and designers
-                            develop product blueprints, prototypes, and
-                            specifications. This phase involves research,
-                            testing, and refinement to ensure the final product
-                            meets customer needs and industry standards.
-                          </p>
-                        </div>
-                      </div>
+                  {/* Manufacturing Plant Image */}
+                  <div className="w-full relative h-48 sm:h-64 md:h-96 mb-8 sm:mb-10">
+                    <Image
+                      src="/images/manufaturing_plant.jpg"
+                      alt="Zigo Technology Manufacturing Plant"
+                      fill
+                      className="object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
+
+                  {/* Enhanced Manufacturing Process Content */}
+                  <div className="w-full rounded-2xl p-6 sm:p-8 md:p-10">
+                    <div className="mb-6">
+                      <h3 className="text-blue-900 text-xl sm:text-2xl md:text-3xl font-bold mb-4">
+                        Our Manufacturing Excellence
+                      </h3>
+                      <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+                        The <strong>manufacturing process</strong> is a
+                        systematic approach to transforming raw materials into
+                        finished products through various stages of production.
+                        The process typically involves several key steps to
+                        ensure efficiency, quality, and consistency. Below is a
+                        general outline of the{" "}
+                        <strong>manufacturing process:</strong>
+                      </p>
                     </div>
 
-                    {/* Step 2 */}
-                    <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-green-600 hover:shadow-lg transition-shadow duration-300">
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
-                          2
-                        </div>
-                        <div className="flex-grow">
-                          <h4 className="font-bold text-green-800 text-base sm:text-lg mb-2">
-                            MATERIAL SELECTION & PROCUREMENT
-                          </h4>
-                          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                            The right materials are chosen based on durability,
-                            cost, and functionality. Manufacturers source raw
-                            materials from suppliers, ensuring they meet quality
-                            standards and regulatory requirements.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Step 3 */}
-                    <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-purple-600 hover:shadow-lg transition-shadow duration-300">
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
-                          3
-                        </div>
-                        <div className="flex-grow">
-                          <h4 className="font-bold text-purple-800 text-base sm:text-lg mb-2">
-                            PRODUCTION & MANUFACTURING
-                          </h4>
-                          <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-3">
-                            Depending on the industry and product, the
-                            production process may include:
-                          </p>
-                          <div className="rounded-lg p-4 space-y-2">
-                            <div className="flex items-start gap-2">
-                              <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                              <p className="text-gray-700 text-sm sm:text-base">
-                                <strong className="text-purple-700">
-                                  Casting & Molding
-                                </strong>{" "}
-                                – Used for metal, plastic, and rubber
-                                components.
-                              </p>
-                            </div>
-                            <div className="flex items-start gap-2">
-                              <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                              <p className="text-gray-700 text-sm sm:text-base">
-                                <strong className="text-purple-700">
-                                  Machining & Cutting
-                                </strong>{" "}
-                                – Precision shaping of materials using CNC
-                                machines, lathes, or mills.
-                              </p>
-                            </div>
-                            <div className="flex items-start gap-2">
-                              <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                              <p className="text-gray-700 text-sm sm:text-base">
-                                <strong className="text-purple-700">
-                                  Assembly & Fabrication
-                                </strong>{" "}
-                                – Combining components using welding, soldering,
-                                or adhesives.
-                              </p>
-                            </div>
+                    {/* Process Steps Grid - Updated to match Home page layout */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                      {/* Step 1 */}
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow duration-300">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
+                            1
+                          </div>
+                          <div className="flex-grow">
+                            <h4 className="font-bold text-blue-800 text-base sm:text-lg mb-2 uppercase">
+                              PRODUCT DESIGN & DEVELOPMENT
+                            </h4>
+                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                              Before manufacturing begins, engineers and
+                              designers develop product blueprints, prototypes,
+                              and specifications. This phase involves research,
+                              testing, and refinement to ensure the final
+                              product meets customer needs and industry
+                              standards.
+                            </p>
                           </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Step 4 */}
-                    <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-red-600 hover:shadow-lg transition-shadow duration-300">
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
-                          4
-                        </div>
-                        <div className="flex-grow">
-                          <h4 className="font-bold text-red-800 text-base sm:text-lg mb-2">
-                            QUALITY CONTROL & TESTING
-                          </h4>
-                          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                            Each product undergoes quality inspections to meet
-                            industry standards and customer expectations. This
-                            may include functional tests, durability
-                            assessments, and compliance checks.
-                          </p>
+                      {/* Step 2 */}
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-green-600 hover:shadow-lg transition-shadow duration-300">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
+                            2
+                          </div>
+                          <div className="flex-grow">
+                            <h4 className="font-bold text-green-800 text-base sm:text-lg mb-2 uppercase">
+                              MATERIAL SELECTION & PROCUREMENT
+                            </h4>
+                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                              The right materials are chosen based on
+                              durability, cost, and functionality. Manufacturers
+                              source raw materials from suppliers, ensuring they
+                              meet quality standards and regulatory
+                              requirements.
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Step 5 */}
-                    <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-yellow-600 hover:shadow-lg transition-shadow duration-300">
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-yellow-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
-                          5
-                        </div>
-                        <div className="flex-grow">
-                          <h4 className="font-bold text-yellow-800 text-base sm:text-lg mb-2">
-                            PACKAGING & LABELING
-                          </h4>
-                          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                            Once approved, products are packaged for protection
-                            during transport and storage. Proper labeling
-                            ensures accurate identification, branding, and
-                            regulatory compliance.
-                          </p>
+                      {/* Step 3 */}
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-purple-600 hover:shadow-lg transition-shadow duration-300">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
+                            3
+                          </div>
+                          <div className="flex-grow">
+                            <h4 className="font-bold text-purple-800 text-base sm:text-lg mb-2 uppercase">
+                              PRODUCTION & MANUFACTURING
+                            </h4>
+                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-3">
+                              Depending on the industry and product, the
+                              production process includes casting & molding for
+                              metal, plastic, and rubber components, machining &
+                              cutting for precision shaping, and assembly &
+                              fabrication combining components using welding,
+                              soldering, or adhesives.
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Step 6 */}
-                    <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-indigo-600 hover:shadow-lg transition-shadow duration-300">
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
-                          6
-                        </div>
-                        <div className="flex-grow">
-                          <h4 className="font-bold text-indigo-800 text-base sm:text-lg mb-2">
-                            DISTRIBUTION & LOGISTICS
-                          </h4>
-                          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                            Finished goods are shipped to warehouses, retailers,
-                            or customers through a well-planned supply chain.
-                            Inventory management and logistics play a crucial
-                            role in timely delivery.
-                          </p>
+                      {/* Step 4 */}
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-red-600 hover:shadow-lg transition-shadow duration-300">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
+                            4
+                          </div>
+                          <div className="flex-grow">
+                            <h4 className="font-bold text-red-800 text-base sm:text-lg mb-2 uppercase">
+                              QUALITY CONTROL & TESTING
+                            </h4>
+                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                              Each product undergoes quality inspections to meet
+                              industry standards and customer expectations. This
+                              may include functional tests, durability
+                              assessments, and compliance checks.
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Step 7 */}
-                    <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-teal-600 hover:shadow-lg transition-shadow duration-300">
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
-                          7
+                      {/* Step 5 */}
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-yellow-600 hover:shadow-lg transition-shadow duration-300">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-yellow-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
+                            5
+                          </div>
+                          <div className="flex-grow">
+                            <h4 className="font-bold text-yellow-800 text-base sm:text-lg mb-2 uppercase">
+                              PACKAGING & LABELING
+                            </h4>
+                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                              Once approved, products are packaged for
+                              protection during transport and storage. Proper
+                              labeling ensures accurate identification,
+                              branding, and regulatory compliance.
+                            </p>
+                          </div>
                         </div>
-                        <div className="flex-grow">
-                          <h4 className="font-bold text-teal-800 text-base sm:text-lg mb-2">
-                            AFTER-SALES SUPPORT & MAINTENANCE
-                          </h4>
-                          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                            Some products, such as electronics or machinery,
-                            require warranties, customer service, and
-                            maintenance support. This ensures customer
-                            satisfaction and product longevity.
-                          </p>
+                      </div>
+
+                      {/* Step 6 */}
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-indigo-600 hover:shadow-lg transition-shadow duration-300">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
+                            6
+                          </div>
+                          <div className="flex-grow">
+                            <h4 className="font-bold text-indigo-800 text-base sm:text-lg mb-2 uppercase">
+                              DISTRIBUTION & LOGISTICS
+                            </h4>
+                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                              Finished goods are shipped to warehouses,
+                              retailers, or customers through a well-planned
+                              supply chain. Inventory management and logistics
+                              play a crucial role in timely delivery.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Step 7 */}
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-teal-600 hover:shadow-lg transition-shadow duration-300">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
+                            7
+                          </div>
+                          <div className="flex-grow">
+                            <h4 className="font-bold text-teal-800 text-base sm:text-lg mb-2 uppercase">
+                              AFTER-SALES SUPPORT & MAINTENANCE
+                            </h4>
+                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                              Some products, such as electronics or machinery,
+                              require warranties, customer service, and
+                              maintenance support. This ensures customer
+                              satisfaction and product longevity.
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -272,8 +282,9 @@ export default function Production() {
             </div>
           </div>
         </div>
-        <div className="mt-4 border-t border-blue-400"></div>
-
+        <div className="flex flex-col items-center">
+          <div className=" h-[3px] w-11/12 bg-blue-200 rounded-md mx-auto"></div>
+        </div>
         {/* Distribution Network Section */}
         <div className="py-8 sm:py-12">
           <div className="container mx-auto px-4 sm:px-8 md:px-16">
@@ -287,14 +298,13 @@ export default function Production() {
                 </div>
 
                 {/* Distribution Content */}
-                <div className="w-ful">
+                <div className="w-full">
                   {/* Introduction */}
                   <div className="mb-8">
                     <div className="rounded-xl p-6">
                       <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
                         Zigo Technology (Private) Limited operates through an
-                        innovative{" "}
-                        <strong>direct distribution </strong>
+                        innovative <strong>direct distribution </strong>
                         model, delivering our premium brands{" "}
                         <strong>OMS, Onesam, and Xpert </strong>
                         efficiently across Sri Lanka. By partnering with trusted
@@ -311,9 +321,10 @@ export default function Production() {
                       HOW THE DISTRIBUTION WORKS
                     </h3>
 
-                    <div className="grid gap-6">
+                    {/* Grid container for distribution steps */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                       {/* Direct Order Processing */}
-                      <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200 hover:shadow-lg transition-all duration-300">
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-green-600 hover:shadow-lg transition-shadow duration-300">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center">
                             <svg
@@ -330,32 +341,23 @@ export default function Production() {
                               ></path>
                             </svg>
                           </div>
-                          <div>
-                            <h4 className="font-bold text-green-800 text-lg mb-2">
+                          <div className="flex-grow">
+                            <h4 className="font-bold text-green-800 text-base sm:text-lg mb-2 uppercase">
                               Direct Order Processing
                             </h4>
-                            <div className="flex items-center gap-2">
-                              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                              <span className="text-gray-700">
-                                Retailers, mobile accessory shops, and corporate
-                                clients place orders directly with <strong>Zigo
-                                  Technology.</strong>
-                              </span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                              <span className="text-gray-700">
-                                This eliminates intermediaries and ensures
-                                customers receive authentic products at
-                                competitive prices.
-                              </span>
-                            </div>
+                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                              Retailers, mobile accessory shops, and corporate
+                              clients place orders directly with{" "}
+                              <strong>Zigo Technology.</strong> This eliminates
+                              intermediaries and ensures customers receive
+                              authentic products at competitive prices.
+                            </p>
                           </div>
                         </div>
                       </div>
 
                       {/* Courier-Based Delivery */}
-                      <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-200 hover:shadow-lg transition-all duration-300">
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow duration-300">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center">
                             <svg
@@ -372,31 +374,24 @@ export default function Production() {
                               ></path>
                             </svg>
                           </div>
-                          <div>
-                            <h4 className="font-bold text-blue-800 text-lg mb-2">
+                          <div className="flex-grow">
+                            <h4 className="font-bold text-blue-800 text-base sm:text-lg mb-2 uppercase">
                               Courier-Based Delivery
                             </h4>
-                            <div className="flex items-center gap-2">
-                              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                              <span className="text-gray-700">
-                                Once an order is processed, the products are
-                                dispatched using <strong>courier service.</strong>
-                              </span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                              <span className="text-gray-700">
-                                This enables efficient and timely delivery to
-                                retailers across <strong>all regions of Sri Lanka, </strong>
-                                including urban and rural areas.
-                              </span>
-                            </div>
+                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                              Once an order is processed, the products are
+                              dispatched using <strong>courier service.</strong>{" "}
+                              This enables efficient and timely delivery to
+                              retailers across{" "}
+                              <strong>all regions of Sri Lanka, </strong>
+                              including urban and rural areas.
+                            </p>
                           </div>
                         </div>
                       </div>
 
                       {/* Centralized Inventory */}
-                      <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl p-6 border border-purple-200 hover:shadow-lg transition-all duration-300">
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-purple-600 hover:shadow-lg transition-shadow duration-300">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center">
                             <svg
@@ -413,32 +408,24 @@ export default function Production() {
                               ></path>
                             </svg>
                           </div>
-                          <div>
-                            <h4 className="font-bold text-purple-800 text-lg mb-2">
+                          <div className="flex-grow">
+                            <h4 className="font-bold text-purple-800 text-base sm:text-lg mb-2 uppercase">
                               Centralized Inventory Management
                             </h4>
-                            <div className="flex items-center gap-2">
-                              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                              <span className="text-gray-700">
-                                Zigo Technology operates a <strong>centralized warehouse </strong>
-                                where all OMS, Onesam, and Xpert products are
-                                stored and dispatched.
-                              </span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                              <span className="text-gray-700">
-                                Orders are packed and shipped directly from this
-                                facility, ensuring stock accuracy and quick
-                                turnaround times.
-                              </span>
-                            </div>
+                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                              Zigo Technology operates a{" "}
+                              <strong>centralized warehouse </strong>
+                              where all OMS, Onesam, and Xpert products are
+                              stored and dispatched. Orders are packed and
+                              shipped directly from this facility, ensuring
+                              stock accuracy and quick turnaround times.
+                            </p>
                           </div>
                         </div>
                       </div>
 
-                      {/* Retain and Corporate Supply */}
-                      <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200 hover:shadow-lg transition-all duration-300">
+                      {/* Retail and Corporate Supply */}
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-amber-600 hover:shadow-lg transition-shadow duration-300">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-12 h-12 bg-amber-600 text-white rounded-full flex items-center justify-center">
                             <svg
@@ -455,34 +442,32 @@ export default function Production() {
                               ></path>
                             </svg>
                           </div>
-                          <div>
-                            <h4 className="font-bold text-amber-800 text-lg mb-2">
-                              Retain & Corporate Supply
+                          <div className="flex-grow">
+                            <h4 className="font-bold text-amber-800 text-base sm:text-lg mb-2 uppercase">
+                              Retail & Corporate Supply
                             </h4>
-                            <div className="flex items-center gap-2">
-                              <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                              <span className="text-gray-700">
-                                The company directly supplies <strong>mobile accessory
-                                  shops, repair centers, and corporate clients </strong>
-                                with bulk and individual orders.
-                              </span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                              <span className="text-gray-700">
-                                This direct model strengthens business
-                                relationships and maintains consistent product
-                                quality.
-                              </span>
-                            </div>
+                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                              The company directly supplies{" "}
+                              <strong>
+                                mobile accessory shops, repair centers, and
+                                corporate clients{" "}
+                              </strong>
+                              with bulk and individual orders. This direct model
+                              strengthens business relationships and maintains
+                              consistent product quality.
+                            </p>
                           </div>
                         </div>
                       </div>
+                    </div>
+
+                    <div className="mt-8">
                       <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                        <strong>By leveraging logistics network,</strong> Zigo Technology ensures
-                        <strong> fast, secure, and efficient </strong> product distribution across
-                        Sri Lanka while maintaining complete control over its
-                        supply chain.
+                        <strong>By leveraging logistics network,</strong> Zigo
+                        Technology ensures
+                        <strong> fast, secure, and efficient </strong> product
+                        distribution across Sri Lanka while maintaining complete
+                        control over its supply chain.
                       </p>
                     </div>
                   </div>
@@ -492,7 +477,9 @@ export default function Production() {
           </div>
         </div>
 
-        <div className="mt-4 border-t border-blue-400"></div>
+        <div className="flex flex-col items-center">
+          <div className="h-[3px] w-11/12 bg-blue-200 rounded-md mx-auto"></div>
+        </div>
 
         {/* Local Distribution Section */}
         <div className="py-4 sm:py-6 md:py-8 relative">
@@ -512,8 +499,9 @@ export default function Production() {
             </div>
           </div>
         </div>
-        <div className="mt-4 border-t border-blue-400"></div>
-
+        <div className="flex flex-col items-center">
+          <div className="mt-8 h-[3px] w-11/12 bg-blue-200 rounded-md mx-auto"></div>
+        </div>
         {/* International Distribution Section */}
         <div className="py-4 sm:py-6 md:py-8 relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-16">

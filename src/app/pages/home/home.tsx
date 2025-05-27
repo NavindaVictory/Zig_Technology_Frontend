@@ -1,10 +1,10 @@
-"use client"
-import { useState, useEffect } from 'react';
+"use client";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import CountUp from 'react-countup';
+import CountUp from "react-countup";
 
 export default function Home() {
     const [startCount, setStartCount] = useState(false);
@@ -17,7 +17,7 @@ export default function Home() {
     }, []);
 
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col overflow-x-hidden">
             <Head>
                 <title>Zigo Technology (Pvt) Ltd.</title>
                 <meta
@@ -130,14 +130,14 @@ export default function Home() {
                                 </h3>
                             </div>
                         </div>
-                        <div className="flex flex-col items-center">
-                            <div className="mt-8 border-t border-blue-400 w-11/12"></div>
+                        <div className="container mx-auto px-4 sm:px-8 md:px-16">
+                            <div className="h-[3px] w-full bg-blue-200 rounded-md mt-4"></div>
                         </div>
                     </div>
                 </div>
 
                 {/* About Us Section */}
-                <div className="bg-white py-12">
+                <div className="bg-white py-8">
                     <div className="container mx-auto px-4">
                         <h2 className="text-gray-500 text-4xl font-medium text-center mb-6">
                             ABOUT US
@@ -149,14 +149,38 @@ export default function Home() {
                         <div className="mb-12">
                             <div className="max-w-4xl mx-auto text-gray-600 space-y-4 text-left">
                                 <p>
-                                    Zigo Technology (Private) Limited is a premier industry leader in the manufacturing, exportation, importation, and distribution of high-quality mobile phone accessories, repair parts, and electrical equipment. As the exclusive owner of the OMS brand (OMS Mobile Phone Accessories) and the sole distributor of Onesam and Xpert, we are committed to delivering cutting-edge solutions that enhance mobile connectivity and user experience. With the establishment of our state-of-the-art manufacturing facility in Sri Lanka in 2019, we have expanded our production capabilities to manufacture premium mobile accessories that meet international quality standards. Our strong export operations enable us to supply OEM and branded accessories to global markets, strengthening our presence across China (PRC), Thailand, Singapore, Bangladesh, India, and beyond.
+                                    Zigo Technology (Private) Limited is a premier industry leader
+                                    in the manufacturing, exportation, importation, and
+                                    distribution of high-quality mobile phone accessories, repair
+                                    parts, and electrical equipment. As the exclusive owner of the
+                                    OMS brand (OMS Mobile Phone Accessories) and the sole
+                                    distributor of Onesam and Xpert, we are committed to
+                                    delivering cutting-edge solutions that enhance mobile
+                                    connectivity and user experience. With the establishment of
+                                    our state-of-the-art manufacturing facility in Sri Lanka in
+                                    2019, we have expanded our production capabilities to
+                                    manufacture premium mobile accessories that meet international
+                                    quality standards. Our strong export operations enable us to
+                                    supply OEM and branded accessories to global markets,
+                                    strengthening our presence across China (PRC), Thailand,
+                                    Singapore, Bangladesh, India, and beyond.
                                 </p>
 
                                 <p>
-                                    Since our inception in 2006 and formal incorporation in 2014, Zigo Technology has continuously evolved, driven by a passion for innovation, efficiency, and excellence. Our ability to manufacture and export high-quality mobile accessories has positioned us as a trusted global supplier, ensuring seamless distribution and accessibility across international markets.
+                                    Since our inception in 2006 and formal incorporation in 2014,
+                                    Zigo Technology has continuously evolved, driven by a passion
+                                    for innovation, efficiency, and excellence. Our ability to
+                                    manufacture and export high-quality mobile accessories has
+                                    positioned us as a trusted global supplier, ensuring seamless
+                                    distribution and accessibility across international markets.
                                 </p>
                                 <p>
-                                    At Zigo Technology, our commitment to technological advancement and superior manufacturing standards remains the driving force behind our success. By maintaining a robust distribution network and a relentless focus on quality, we continue to set new benchmarks in the mobile accessories industry.
+                                    At Zigo Technology, our commitment to technological
+                                    advancement and superior manufacturing standards remains the
+                                    driving force behind our success. By maintaining a robust
+                                    distribution network and a relentless focus on quality, we
+                                    continue to set new benchmarks in the mobile accessories
+                                    industry.
                                 </p>
 
                                 <p>
@@ -180,167 +204,181 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* Vision and Mission */}
-                        <div className="flex flex-col md:flex-row justify-between">
-                            {/* Vision */}
-                            <div className="flex-1 text-center md:border-r md:border-gray-300 px-4">
-                                <div className="flex justify-center mb-4">
-                                    <div className="w-24 h-24 relative">
-                                        <Image
-                                            src="/images/vision.jpg"
-                                            alt="Vision Icon"
-                                            fill
-                                            className="object-contain"
-                                        />
+                        {/* Vision and Mission - Side by Side within container */}
+                        <div className="max-w-4xl mx-auto mb-12">
+                            <div className="flex flex-col md:flex-row justify-between gap-8">
+                                {/* Vision */}
+                                <div className="flex-1 text-center md:border-r md:border-gray-300 md:pr-8">
+                                    <div className="flex justify-center mb-4">
+                                        <div className="w-24 h-24 relative">
+                                            <Image
+                                                src="/images/vision.jpg"
+                                                alt="Vision Icon"
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </div>
                                     </div>
+                                    <h3 className="text-gray-600 text-2xl font-medium mb-4">
+                                        OUR VISION
+                                    </h3>
+                                    <p className="text-gray-600">
+                                        To become the world's leading brand in mobile accessories
+                                        and electronic equipment, recognized for innovation,
+                                        superior quality and exceptional customer experience.
+                                    </p>
                                 </div>
-                                <h3 className="text-gray-600 text-2xl font-medium mb-4">
-                                    OUR VISION
-                                </h3>
-                                <p className="text-gray-600">
-                                    To become the world’s leading brand in mobile accessories and electronic equipment, recognized for innovation, superior quality and exceptional customer experience.
-                                </p>
-                            </div>
 
-                            {/* Mission */}
-                            <div className="flex-1 text-center">
-                                <div className="flex justify-center mb-4">
-                                    <div className="w-24 h-24 relative">
-                                        <Image
-                                            src="/images/mission.jpg"
-                                            alt="Mission Icon"
-                                            fill
-                                            className="object-contain"
-                                        />
+                                {/* Mission */}
+                                <div className="flex-1 text-center md:pl-8">
+                                    <div className="flex justify-center mb-4">
+                                        <div className="w-24 h-24 relative">
+                                            <Image
+                                                src="/images/mission.jpg"
+                                                alt="Mission Icon"
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </div>
                                     </div>
+                                    <h3 className="text-gray-600 text-2xl font-medium mb-4">
+                                        OUR MISSION
+                                    </h3>
+                                    <p className="text-gray-600">
+                                        To deliver premium mobile accessories and electronic
+                                        equipment to customers worldwide, ensuring quality,
+                                        innovation and customer satisfaction.
+                                    </p>
                                 </div>
-                                <h3 className="text-gray-600 text-2xl font-medium mb-4">
-                                    OUR MISSION
-                                </h3>
-                                <p className="text-gray-600">
-                                    To deliver premium mobile accessories and electronic equipment to customers worldwide, ensuring quality, innovation and customer satisfaction.
-                                </p>
                             </div>
                         </div>
 
-                        <div className="flex flex-col items-center">
-                            <div className="mt-8 border-t border-blue-400 w-11/12"></div>
+                        <div className="container mx-auto px-4 sm:px-8 md:px-16">
+                            <div className="h-[3px] w-full bg-blue-200 rounded-md mt-8"></div>
                         </div>
 
                         {/* Core Values */}
-                        <div className="grid gap-6 sm:gap-8 mt-15">
-                            <h2 className="text-gray-500 text-4xl font-medium text-center mb-6">
+                        <div className="mt-15">
+                            <h2 className="text-gray-500 text-4xl font-medium text-center mb-6 uppercase">
                                 Core Values
                             </h2>
-                            {/* 1 */}
-                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow duration-300">
-                                <div className="flex items-start gap-4">
-                                    <div className="flex-grow">
-                                        <h4 className="font-bold text-blue-800 text-base sm:text-lg mb-2">
-                                            Quality & Innovation
-                                        </h4>
-                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                                            We prioritize high quality materials and cutting-edge technology to create durable, innovative accessories that enhance user experience.
-                                        </p>
+
+                            {/* Grid container for 2 columns */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                                {/* 1 */}
+                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow duration-300">
+                                    <div className="flex items-start gap-4">
+                                        <div className="flex-grow">
+                                            <h4 className="font-bold text-blue-800 text-base sm:text-lg mb-2 uppercase">
+                                                Quality & Innovation
+                                            </h4>
+                                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                                We prioritize high quality materials and cutting-edge
+                                                technology to create durable, innovative accessories
+                                                that enhance user experience.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            {/* 2 */}
-                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-green-600 hover:shadow-lg transition-shadow duration-300">
-                                <div className="flex items-start gap-4">
-
-                                    <div className="flex-grow">
-                                        <h4 className="font-bold text-green-800 text-base sm:text-lg mb-2">
-                                            Customer – Centric Approach
-                                        </h4>
-                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                                            Our customers are at the heart of everything we do. We strive to exceed expectations with exceptional service, reliability and value.
-                                        </p>
+                                {/* 2 */}
+                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-green-600 hover:shadow-lg transition-shadow duration-300">
+                                    <div className="flex items-start gap-4">
+                                        <div className="flex-grow">
+                                            <h4 className="font-bold text-green-800 text-base sm:text-lg mb-2 uppercase">
+                                                Customer – Centric Approach
+                                            </h4>
+                                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                                Our customers are at the heart of everything we do. We
+                                                strive to exceed expectations with exceptional service,
+                                                reliability and value.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            {/* 3 */}
-                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-purple-600 hover:shadow-lg transition-shadow duration-300">
-                                <div className="flex items-start gap-4">
-
-                                    <div className="flex-grow">
-                                        <h4 className="font-bold text-purple-800 text-base sm:text-lg mb-2">
-                                            Sustainability & Responsibility
-                                        </h4>
-                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-3">
-                                            We are committed to eco friendly manufacturing reducing waste, and ensuring responsible sourcing of materials
-                                        </p>
-
+                                {/* 3 */}
+                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-purple-600 hover:shadow-lg transition-shadow duration-300">
+                                    <div className="flex items-start gap-4">
+                                        <div className="flex-grow">
+                                            <h4 className="font-bold text-purple-800 text-base sm:text-lg mb-2 uppercase">
+                                                Sustainability & Responsibility
+                                            </h4>
+                                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-3">
+                                                We are committed to eco friendly manufacturing reducing
+                                                waste, and ensuring responsible sourcing of materials
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            {/* 4 */}
-                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-red-600 hover:shadow-lg transition-shadow duration-300">
-                                <div className="flex items-start gap-4">
-
-                                    <div className="flex-grow">
-                                        <h4 className="font-bold text-red-800 text-base sm:text-lg mb-2">
-                                            Integrity and Transparency
-                                        </h4>
-                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                                            We conduct business with honesty, fairness and transparency, building trust with customers, partners and stakeholders
-                                        </p>
+                                {/* 4 */}
+                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-red-600 hover:shadow-lg transition-shadow duration-300">
+                                    <div className="flex items-start gap-4">
+                                        <div className="flex-grow">
+                                            <h4 className="font-bold text-red-800 text-base sm:text-lg mb-2 uppercase">
+                                                Integrity and Transparency
+                                            </h4>
+                                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                                We conduct business with honesty, fairness and
+                                                transparency, building trust with customers, partners
+                                                and stakeholders
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            {/* 5 */}
-                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-yellow-600 hover:shadow-lg transition-shadow duration-300">
-                                <div className="flex items-start gap-4">
-
-                                    <div className="flex-grow">
-                                        <h4 className="font-bold text-yellow-800 text-base sm:text-lg mb-2">
-                                            Global Reach, Local Commitment
-                                        </h4>
-                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                                            While we operate globally, we remain dedicated to understanding and meeting the unique needs of local markets
-                                        </p>
+                                {/* 5 */}
+                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-yellow-600 hover:shadow-lg transition-shadow duration-300">
+                                    <div className="flex items-start gap-4">
+                                        <div className="flex-grow">
+                                            <h4 className="font-bold text-yellow-800 text-base sm:text-lg mb-2 uppercase">
+                                                Global Reach, Local Commitment
+                                            </h4>
+                                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                                While we operate globally, we remain dedicated to
+                                                understanding and meeting the unique needs of local
+                                                markets
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            {/* 6 */}
-                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-indigo-600 hover:shadow-lg transition-shadow duration-300">
-                                <div className="flex items-start gap-4">
-                                  
-                                    <div className="flex-grow">
-                                        <h4 className="font-bold text-indigo-800 text-base sm:text-lg mb-2">
-                                            Continuous Improvement
-                                        </h4>
-                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                                            We embrace change, adapt to new trends and continuously improve our products and processes to stay ahead in the industry.
-                                        </p>
+                                {/* 6 */}
+                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-indigo-600 hover:shadow-lg transition-shadow duration-300">
+                                    <div className="flex items-start gap-4">
+                                        <div className="flex-grow">
+                                            <h4 className="font-bold text-indigo-800 text-base sm:text-lg mb-2 uppercase">
+                                                Continuous Improvement
+                                            </h4>
+                                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                                We embrace change, adapt to new trends and continuously
+                                                improve our products and processes to stay ahead in the
+                                                industry.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            {/* 7 */}
-                            <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-teal-600 hover:shadow-lg transition-shadow duration-300">
-                                <div className="flex items-start gap-4">
-
-                                    <div className="flex-grow">
-                                        <h4 className="font-bold text-teal-800 text-base sm:text-lg mb-2">
-                                            Strong Partnerships
-                                        </h4>
-                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                                            We believe in fostering long-term relationships with suppliers, distributors and retailers to create a strong and sustainable supply chain.
-                                        </p>
+                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-teal-600 hover:shadow-lg transition-shadow duration-300">
+                                    <div className="flex items-start gap-4">
+                                        <div className="flex-grow">
+                                            <h4 className="font-bold text-teal-800 text-base sm:text-lg mb-2 uppercase">
+                                                Strong Partnerships
+                                            </h4>
+                                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                                We believe in fostering long-term relationships with
+                                                suppliers, distributors and retailers to create a strong
+                                                and sustainable supply chain.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col items-center">
-                            <div className="mt-8 border-t border-blue-400 w-11/12"></div>
+                        <div className="container mx-auto px-4 sm:px-8 md:px-16">
+                            <div className="h-[3px] w-full bg-blue-200 rounded-md mt-12"></div>
                         </div>
-
                     </div>
                 </div>
 
@@ -354,7 +392,11 @@ export default function Home() {
                         <div className="flex flex-wrap justify-center gap-8">
                             {/* 15 Years Experience */}
                             <div className="p-8 text-center w-full md:w-64">
-                                <h3 className="text-blue-700 text-5xl font-bold mb-2">{startCount && <CountUp end={15} duration={6} separator="," />}</h3>
+                                <h3 className="text-blue-700 text-5xl font-bold mb-2">
+                                    {startCount && (
+                                        <CountUp end={15} duration={6} separator="," />
+                                    )}
+                                </h3>
                                 <p className="text-blue-700 font-semibold uppercase">YEARS</p>
                                 <p className="text-blue-700 text-sm">
                                     Competence On Mobile Accessory Industry
@@ -363,7 +405,11 @@ export default function Home() {
 
                             {/* 3500+ Products */}
                             <div className="p-8 text-center w-full md:w-64">
-                                <h3 className="text-blue-700 text-5xl font-bold mb-2">{startCount && <CountUp end={3500} duration={4} separator="," />}</h3>
+                                <h3 className="text-blue-700 text-5xl font-bold mb-2">
+                                    {startCount && (
+                                        <CountUp end={3500} duration={4} separator="," />
+                                    )}
+                                </h3>
                                 <p className="text-blue-700 font-semibold uppercase">PLUS</p>
                                 <p className="text-blue-700 text-sm">PRODUCTS</p>
                             </div>
@@ -400,18 +446,19 @@ export default function Home() {
                 </div>
 
                 {/* Milestones */}
-
                 <div className="bg-white py-10 flex flex-col items-center">
-                    <div className="border-t border-blue-400 w-11/12"></div>
+                    <div className="container mx-auto px-4 sm:px-8 md:px-16">
+                        <div className="h-[3px] w-full bg-blue-200 rounded-md mt-4"></div>
+                    </div>
                     <div className="container mx-auto">
                         <h2 className="text-gray-500 text-4xl font-medium text-center mb-12 pt-12">
                             MILESTONES
                         </h2>
                         <div className="flex flex-col items-center mb-10 ">
-                            <div className="relative h-[400px] w-lvw">
+                            <div className="relative h-[500px] w-lvw">
                                 {/* SVG Graph Path */}
                                 <svg
-                                    viewBox="0 0 1200 400"
+                                    viewBox="0 0 1200 500"
                                     className="absolute w-full h-full"
                                     preserveAspectRatio="xMidYMid meet"
                                 >
@@ -428,86 +475,135 @@ export default function Home() {
                                         </marker>
                                     </defs>
                                     <path
-                                        d="M150,350 C500,350 900,300,1150,50"
+                                        d="M150,450 C500,450 900,400,1150,150"
                                         fill="none"
                                         stroke="#3B82F6"
                                         strokeWidth="2"
                                     />
                                     {/* Milestone Bubbles */}
                                     {[
-                                        { x: 150, y: 350, year: "2006", label: "FOUND THE COMPANY" },
-                                        { x: 300, y: 345, year: "2014", label: "INCORPORATE THE COMPANY" },
-                                        { x: 450, y: 334, year: "2014", label: "INITIATE THE STRATEGIC RELATION WITH CHINESE BUSINESS PARTNERS" },
-                                        { x: 600, y: 310, year: "2014", label: "LAUNCH OMS BRAND TO THE SRILANKA MARKET" },
-                                        { x: 750, y: 275, year: "2015", label: "START DEALER NETWORK OPERATION" },
-                                        { x: 900, y: 220, year: "2016", label: "LAUNCH THE ONESAM BRAND" },
-                                        { x: 1030, y: 150, year: "2019", label: "MANUFACTURING PLANT STARTED" },
-                                        { x: 1150, y: 50, year: "2020", label: "EXPLORE INDONESIAN MARKET" },
-                                        { x: 1170, y: 40, year: "2022", label: "EXPLORE UAE MARKET" },
-                                    ].map((milestone, i) => (
-                                        <g key={i} className='group'>
-                                            {/* Bubble */}
-                                            <circle
-                                                cx={milestone.x}
-                                                cy={milestone.y}
-                                                r="12"
-                                                className="fill-blue-200 stroke-blue-200 stroke-2 cursor-pointer group hover:fill-blue-500 hover:stroke-blue-400 hover:cursor-pointer duration-200 ease-in-out"
-                                            />
-                                            {/* Year */}
-                                            <text
-                                                x={milestone.x}
-                                                y={milestone.y - 15}
-                                                textAnchor="middle"
-                                                className="fill-blue-700 text-sm font-semibold"
-                                            >
-                                                {milestone.year}
-                                            </text>
-                                            {/* Tooltip Group */}
-                                            <g className="opacity-0 group-hover:opacity-100 transition-opacity duration-1000 w-auto">
-                                                {/* Arrow */}
-                                                <path
-                                                    d={`M${milestone.x},${milestone.y - 200} L${milestone.x},${milestone.y - 60}`}
-                                                    stroke="#3B82F6"
-                                                    strokeWidth="2"
-                                                    markerEnd="url(#arrowhead)"
+                                        {
+                                            x: 150,
+                                            y: 450,
+                                            year: "2006",
+                                            label: "FOUND THE COMPANY",
+                                        },
+                                        {
+                                            x: 300,
+                                            y: 445,
+                                            year: "2014",
+                                            label: "INCORPORATE THE COMPANY",
+                                        },
+                                        {
+                                            x: 450,
+                                            y: 434,
+                                            year: "2014",
+                                            label:
+                                                "INITIATE THE STRATEGIC RELATION WITH CHINESE BUSINESS PARTNERS",
+                                        },
+                                        {
+                                            x: 600,
+                                            y: 410,
+                                            year: "2014",
+                                            label: "LAUNCH OMS BRAND TO THE SRILANKA MARKET",
+                                        },
+                                        {
+                                            x: 750,
+                                            y: 375,
+                                            year: "2015",
+                                            label: "START DEALER NETWORK OPERATION",
+                                        },
+                                        {
+                                            x: 900,
+                                            y: 320,
+                                            year: "2016",
+                                            label: "LAUNCH THE ONESAM BRAND",
+                                        },
+                                        {
+                                            x: 1030,
+                                            y: 250,
+                                            year: "2019",
+                                            label: "MANUFACTURING PLANT STARTED",
+                                        },
+                                        {
+                                            x: 1150,
+                                            y: 150,
+                                            year: "2020",
+                                            label: "EXPLORE INDONESIAN MARKET",
+                                        },
+                                        {
+                                            x: 1170,
+                                            y: 140,
+                                            year: "2022",
+                                            label: "EXPLORE UAE MARKET",
+                                        },
+                                    ].map((milestone, i) => {
+                                        // Calculate tooltip position - place above bubble with minimum distance from top
+                                        const tooltipY = Math.max(milestone.y - 140, 40);
+                                        const arrowEndY = milestone.y - 60;
+
+                                        // Determine tooltip dimensions based on text length
+                                        const isLongText = milestone.label.length > 35;
+                                        const tooltipWidth = isLongText ? 280 : 200;
+                                        const tooltipHeight = isLongText ? 60 : 40;
+                                        const tooltipX = milestone.x - tooltipWidth / 2;
+
+                                        return (
+                                            <g key={i} className="group">
+                                                {/* Bubble */}
+                                                <circle
+                                                    cx={milestone.x}
+                                                    cy={milestone.y}
+                                                    r="12"
+                                                    className="fill-blue-200 stroke-blue-200 stroke-2 cursor-pointer group hover:fill-blue-500 hover:stroke-blue-400 hover:cursor-pointer duration-200 ease-in-out"
                                                 />
-                                                {/* Tooltip Background */}
-                                                <rect
-                                                    x={milestone.x - 75}
-                                                    y={milestone.y - 150}
-                                                    // width="100%"
-                                                    height="40"
-                                                    rx="5"
-                                                    ry="5"
-                                                    fill="white"
-                                                    stroke="#3B82F6"
-                                                    strokeWidth="1"
-                                                />
-                                                {/* Tooltip Text */}
+                                                {/* Year */}
                                                 <text
                                                     x={milestone.x}
-                                                    y={milestone.y - 210}
+                                                    y={milestone.y - 15}
                                                     textAnchor="middle"
-                                                    className="fill-blue-600 text-xs font-medium p-2 border-blue-600 w-auto"
+                                                    className="fill-blue-700 text-sm font-semibold"
                                                 >
-                                                    {milestone.label}
+                                                    {milestone.year}
                                                 </text>
+                                                {/* Tooltip Group */}
+                                                <g className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                    {/* Arrow */}
+                                                    <path
+                                                        d={`M${milestone.x},${tooltipY + tooltipHeight} L${milestone.x
+                                                            },${arrowEndY}`}
+                                                        stroke="#3B82F6"
+                                                        strokeWidth="2"
+                                                        markerEnd="url(#arrowhead)"
+                                                    />
+                                                    {/* Tooltip Background */}
+                                                    <rect
+                                                        x={tooltipX}
+                                                        y={tooltipY}
+                                                        width={tooltipWidth}
+                                                        height={tooltipHeight}
+                                                        rx="8"
+                                                        ry="8"
+                                                        fill="white"
+                                                        stroke="#3B82F6"
+                                                        strokeWidth="1"
+                                                        className="drop-shadow-md"
+                                                    />
+                                                    {/* Tooltip Text */}
+                                                    <foreignObject
+                                                        x={tooltipX + 8}
+                                                        y={tooltipY + 8}
+                                                        width={tooltipWidth - 16}
+                                                        height={tooltipHeight - 16}
+                                                    >
+                                                        <div className="text-xs font-medium text-blue-600 text-center px-2 leading-tight flex items-center justify-center h-full">
+                                                            {milestone.label}
+                                                        </div>
+                                                    </foreignObject>
+                                                </g>
                                             </g>
-                                        </g>
-                                    ))}
-                                    {/* Define Arrowhead Marker
-                                    <defs>
-                                        <marker
-                                            id="arrowhead"
-                                            markerWidth="10"
-                                            markerHeight="7"
-                                            refX="0"
-                                            refY="3.5"
-                                            orient="auto"
-                                        >
-                                            <polygon points="0 0, 5 3.5, 0 7" fill="#3B82F6" />
-                                        </marker>
-                                    </defs> */}
+                                        );
+                                    })}
                                 </svg>
                             </div>
                         </div>
