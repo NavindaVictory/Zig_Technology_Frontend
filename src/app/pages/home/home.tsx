@@ -46,11 +46,12 @@ export default function Home() {
                     <div className="relative z-10 container mx-auto px-4 py-16 text-center text-white">
                         {/* Hero section with large logo */}
                         <div className="mb-12 flex justify-center">
-                            <div className="relative w-full max-w-2xl h-32">
+                            <div className="relative w-auto rounded-2xl max-w-2xl h-32 bg-white flex justify-center items-center">
                                 <Image
-                                    src="/images/logo.jpg"
+                                    src="/images/Web site images-05.png"
                                     alt="Zigo Technology Logo"
-                                    fill
+                                    width={300}
+                                    height={200}
                                     className="object-contain"
                                     priority
                                 />
@@ -189,7 +190,7 @@ export default function Home() {
                                     island-wide while maintaining a strong focus on customer
                                     satisfaction. Our dedication to excellence has enabled us to
                                     build strategic partnerships with international markets,
-                                    including the People's Republic of China (PRC), Thailand,
+                                    including the People &apos s Republic of China (PRC), Thailand,
                                     Singapore, Bangladesh, and India.
                                 </p>
 
@@ -223,7 +224,7 @@ export default function Home() {
                                         OUR VISION
                                     </h3>
                                     <p className="text-gray-600">
-                                        To become the world's leading brand in mobile accessories
+                                        To become the world &apos s leading brand in mobile accessories
                                         and electronic equipment, recognized for innovation,
                                         superior quality and exceptional customer experience.
                                     </p>

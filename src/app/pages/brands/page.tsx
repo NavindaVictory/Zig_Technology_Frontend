@@ -97,15 +97,16 @@ export default function Brands() {
                         {/* brands */}
                         <div className="flex flex-col md:flex-row justify-between mt-10">
                             {/* Vertical line */}
-                            <div className="w-0.5 bg-gray-200 mx-2 h-48 mt-10"></div>
+                            <div className="w-0.5 bg-gray-200 mx-2 h-64 mt-10"></div>
                             {/* OMS */}
-                            <div className="flex-1 text-center px-4">
-                                <div className="flex justify-center mb-4">
-                                    <div className="w-24 h-24 relative">
+                            <div className="flex-1 text-center">
+                                <div className="flex justify-center">
+                                    <div className="w-3xs h-52 relative">
                                         <Image
-                                            src="/images/vision.jpg"
+                                            src="/images/Web site images-01.png"
                                             alt="Vision Icon"
-                                            fill
+                                            height={300}
+                                            width={300}
                                             className="object-contain"
                                         />
                                     </div>
@@ -122,15 +123,16 @@ export default function Brands() {
                                     Read More
                                 </button>
                             </div>
-                            <div className="w-0.5 bg-gray-200 mx-2 h-48 mt-10"></div>
+                            <div className="w-0.5 bg-gray-200 mx-2 h-64 mt-10"></div>
                             {/* ONESAM */}
-                            <div className="flex-1 text-center px-4">
-                                <div className="flex justify-center mb-4">
-                                    <div className="w-24 h-24 relative">
+                            <div className="flex-1 text-center">
+                                <div className="flex justify-center">
+                                    <div className="w-3xs h-52  relative">
                                         <Image
-                                            src="/images/vision.jpg"
+                                            src="/images/Web site images-02.png"
                                             alt="Vision Icon"
-                                            fill
+                                            height={300}
+                                            width={300}
                                             className="object-contain"
                                         />
                                     </div>
@@ -147,15 +149,16 @@ export default function Brands() {
                                     Read More
                                 </button>
                             </div>
-                            <div className="w-0.5 bg-gray-200 mx-2 h-48 mt-10"></div>
+                            <div className="w-0.5 bg-gray-200 mx-2 h-64 mt-10"></div>
                             {/* X-PERT */}
                             <div className="flex-1 text-center">
-                                <div className="flex justify-center mb-4">
-                                    <div className="w-24 h-24 relative">
+                                <div className="flex justify-center">
+                                    <div className="w-3xs h-52  relative">
                                         <Image
-                                            src="/images/mission.jpg"
+                                            src="/images/Web site images-03.png"
                                             alt="Mission Icon"
-                                            fill
+                                            height={300}
+                                            width={300}
                                             className="object-contain"
                                         />
                                     </div>
@@ -172,7 +175,7 @@ export default function Brands() {
                                     Read More
                                 </button>
                             </div>
-                            <div className="w-0.5 bg-gray-200 mx-2 h-48 mt-10"></div>
+                            <div className="w-0.5 bg-gray-200 mx-2 h-64 mt-10"></div>
                         </div>
                     </div>
                 </div>

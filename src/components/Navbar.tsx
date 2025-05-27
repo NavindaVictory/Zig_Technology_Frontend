@@ -39,17 +39,21 @@ const Navbar = () => {
                 <div className="flex justify-between h-16">
                     <div className="flex items-center">
                         <Link href="/" className="flex-shrink-0">
-                            <div className="relative w-64 h-12">
+                            <div
+                                className={`relative w-96 h-24 bg-white rounded-bl-3xl rounded-br-3xl ${scrolling ? 'opacity-0' : ''} flex items-center justify-center`}
+                            >
                                 <Image
-                                    src="/images/logo.jpg"
+                                    src="/images/Web site images-04.png"
                                     alt="Zigo Technology Logo"
-                                    fill
+                                    height={200}
+                                    width={500}
                                     className="object-contain"
                                     priority
                                 />
                             </div>
                         </Link>
                     </div>
+
 
                     {/* Desktop menu */}
                     <div className="hidden md:flex items-center space-x-4">

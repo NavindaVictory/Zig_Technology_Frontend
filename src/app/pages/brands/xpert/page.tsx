@@ -1,11 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import pro1 from "../../../../../public/images/products/pro1.png";
+import pro2 from "../../../../../public/images/products/pro2.png";
+import pro3 from "../../../../../public/images/products/pro3.png";
+import pro4 from "../../../../../public/images/products/pro4.png";
 
 export default function XPert() {
-
     return (
         <div className="min-h-screen flex flex-col">
             <Head>
@@ -32,11 +35,8 @@ export default function XPert() {
                         />
                     </div>
                     <div className="relative z-10 container mx-auto px-4 py-16 text-start text-white">
-
                         {/* Welcome text */}
-                        <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-                            OUR BRANDS
-                        </h1>
+                        <h1 className="text-4xl sm:text-5xl font-bold mb-4">OUR BRANDS</h1>
 
                         {/* Placeholder text - replace with actual content */}
                         <p className="max-w-3xl text-lg">
@@ -61,7 +61,10 @@ export default function XPert() {
                                     <span className="text-blue-500">/</span>
                                 </li>
                                 <li>
-                                    <Link href="/pages/brands" className="text-blue-500 hover:underline">
+                                    <Link
+                                        href="/pages/brands"
+                                        className="text-blue-500 hover:underline"
+                                    >
                                         Our Brands
                                     </Link>
                                 </li>
@@ -77,7 +80,7 @@ export default function XPert() {
                         </nav>
                         {/* Heading */}
                         <div className="flex flex-col items-center">
-                            <div className="mt-2 border-t border-blue-400 w-11/12"></div>
+                            <div className="mt-8 h-[3px] w-11/12 bg-blue-200 rounded-md mx-auto"></div>
                         </div>
 
                         {/* brands */}
@@ -86,120 +89,116 @@ export default function XPert() {
                             <div className="w-0.5 bg-gray-200 mx-2 h-1vh mt-10"></div>
                             {/* X-PERT */}
                             <div className="flex-1 text-center p-6 justify-center">
-                                <div className="flex justify-start mb-4">
-                                    <div className="w-24 h-24 relative">
+                                <div className="flex justify-start mb-15">
+                                    <div className="w-2xl h-48  relative">
                                         <Image
-                                            src="/images/vision.jpg"
+                                            src="/images/Web site images-03.png"
                                             alt="Vision Icon"
-                                            fill
+                                            height={300}
+                                            width={300}
                                             className="object-contain"
                                         />
                                     </div>
                                 </div>
-                                <div className="flex justify-start px-2">
-                                    <h3 className="text-gray-400 text-xl font-medium mb-4">
-                                        X-PERT
-                                    </h3>
-                                </div>
                                 <p className="text-gray-600 p-4 max-w-auto text-justify">
-
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                                    nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                    elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                                    dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                                    veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+                                    minim veniam, quis nostrud Lorem ipsum dolor sit amet,
+                                    consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                                    wisi enim ad minim veniam, quis nostrud Lorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                    euismod tincidunt ut laoreet dolore magna aliquam erat
+                                    volutpat. Ut wisi enim ad minim veniam, quis nostrud Lorem
+                                    ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                                     nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
                                     erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                                    nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                    elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                                    dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                                    veniam, quis nostrud
                                 </p>
 
                                 <p className="text-gray-600 p-4 max-w-auto text-justify">
-
-
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                                    nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                    elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                                    dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                                    veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+                                    minim veniam, quis nostrud Lorem ipsum dolor sit amet,
+                                    consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                                    wisi enim ad minim veniam, quis nostrud
                                 </p>
                                 <p className="text-gray-600 p-4 max-w-auto text-justify">
-
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                                    nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                    elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                                    dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                                    veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+                                    minim veniam, quis nostrud Lorem ipsum dolor sit amet,
+                                    consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                                    wisi enim ad minim veniam, quis nostrud
                                 </p>
                                 <div>
                                     <div className="flex flex-col items-center">
                                         <div className="p-20">
-                                            <h1 className="text-gray-400 font-bold text-4xl w-full content-center">
+                                            <h1 className="text-gray-500 font-bold text-4xl uppercase">
                                                 Products
                                             </h1>
                                         </div>
                                     </div>
-                                    <div className="flex flex-row">
-                                        <div>
-                                            <img src="/images/products/pro1.png" alt="product 1" />
-                                        </div>
-                                        <div>
-                                            <img src="/images/products/pro2.png" alt="product 2" />
-                                        </div>
-                                        <div>
-                                            <img src="  /images/products/pro3.png" alt="product 3" />
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row">
-                                        <div>
-                                            <img src="/images/products/pro4.png" alt="product 1" />
-                                        </div>
-                                        <div>
-                                            <img src="/images/products/pro3.png" alt="product 2" />
-                                        </div>
-                                        <div>
-                                            <img src="  /images/products/pro2.png" alt="product 3" />
-                                        </div>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6 pb-12">
+                                        {[pro1, pro2, pro3, pro4, pro3, pro2].map(
+                                            (product, index) => (
+                                                <div
+                                                    key={index}
+                                                    className="bg-gray-200 shadow-md rounded-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                                                >
+                                                    <div className="relative w-full h-64">
+                                                        <Image
+                                                            src={product}
+                                                            alt={`product ${index + 1}`}
+                                                            layout="fill"
+                                                            className="object-contain p-6"
+                                                        />
+                                                    </div>
+                                                    <div className="p-4 text-center">
+                                                        <h3 className="text-lg font-semibold text-gray-700">
+                                                            Product {index + 1}
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            )
+                                        )}
                                     </div>
                                 </div>
                             </div>
                             <div className="w-0.5 bg-gray-200 mx-2 h-1vh mt-10"></div>
-
                         </div>
                     </div>
                 </div>
             </main>
             <Footer />
         </div>
-    )
+    );
 }
