@@ -45,8 +45,8 @@ export default function Home() {
 
                     <div className="relative z-10 container mx-auto px-4 py-16 text-center text-white">
                         {/* Hero section with large logo */}
-                        <div className="mb-12 flex justify-center">
-                            <div className="relative w-auto rounded-2xl max-w-2xl h-32 bg-white flex justify-center items-center">
+                        <div className="mb-12 flex justify-center mt-20">
+                            <div className="relative w-auto rounded-2xl max-w-2xl h-24 bg-white flex justify-center items-center">
                                 <Image
                                     src="/images/Web site images-05.png"
                                     alt="Zigo Technology Logo"
@@ -190,8 +190,8 @@ export default function Home() {
                                     island-wide while maintaining a strong focus on customer
                                     satisfaction. Our dedication to excellence has enabled us to
                                     build strategic partnerships with international markets,
-                                    including the People &apos s Republic of China (PRC), Thailand,
-                                    Singapore, Bangladesh, and India.
+                                    including the People &apos s Republic of China (PRC),
+                                    Thailand, Singapore, Bangladesh, and India.
                                 </p>
 
                                 <p>
@@ -224,9 +224,10 @@ export default function Home() {
                                         OUR VISION
                                     </h3>
                                     <p className="text-gray-600">
-                                        To become the world &apos s leading brand in mobile accessories
-                                        and electronic equipment, recognized for innovation,
-                                        superior quality and exceptional customer experience.
+                                        To become the world &apos s leading brand in mobile
+                                        accessories and electronic equipment, recognized for
+                                        innovation, superior quality and exceptional customer
+                                        experience.
                                     </p>
                                 </div>
 
@@ -447,15 +448,15 @@ export default function Home() {
                 </div>
 
                 {/* Milestones */}
-                <div className="bg-white py-10 flex flex-col items-center">
+                <div className="bg-white py-5 flex flex-col items-center">
                     <div className="container mx-auto px-4 sm:px-8 md:px-16">
                         <div className="h-[3px] w-full bg-blue-200 rounded-md mt-4"></div>
                     </div>
                     <div className="container mx-auto">
-                        <h2 className="text-gray-500 text-4xl font-medium text-center mb-12 pt-12">
+                        <h2 className="text-gray-500 text-4xl font-medium text-center mb-5 pt-12">
                             MILESTONES
                         </h2>
-                        <div className="flex flex-col items-center mb-10 ">
+                        <div className="flex flex-col items-center mb-10">
                             <div className="relative h-[500px] w-lvw">
                                 {/* SVG Graph Path */}
                                 <svg
@@ -471,15 +472,31 @@ export default function Home() {
                                             refX="0"
                                             refY="3.5"
                                             orient="auto"
+
                                         >
                                             <polygon points="0 0, 5 3.5, 0 7" fill="#3B82F6" />
                                         </marker>
+                                        <linearGradient
+                                            id="curveFillGradient"
+                                            x1="0"
+                                            y1="0"
+                                            x2="0"
+                                            y2="1"
+                                        >
+                                            <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.9" />
+                                            <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+                                        </linearGradient>
                                     </defs>
                                     <path
                                         d="M150,450 C500,450 900,400,1150,150"
                                         fill="none"
                                         stroke="#3B82F6"
                                         strokeWidth="2"
+                                    />
+                                    <path
+                                        d="M150,450 C500,450 900,400,1150,150 L1150,500 L150,500 Z"
+                                        fill="url(#curveFillGradient)"
+                                        stroke="none"
                                     />
                                     {/* Milestone Bubbles */}
                                     {[
@@ -490,51 +507,51 @@ export default function Home() {
                                             label: "FOUND THE COMPANY",
                                         },
                                         {
-                                            x: 300,
+                                            x: 280,
                                             y: 445,
                                             year: "2014",
                                             label: "INCORPORATE THE COMPANY",
                                         },
                                         {
-                                            x: 450,
-                                            y: 434,
+                                            x: 410,
+                                            y: 438,
                                             year: "2014",
                                             label:
                                                 "INITIATE THE STRATEGIC RELATION WITH CHINESE BUSINESS PARTNERS",
                                         },
                                         {
-                                            x: 600,
-                                            y: 410,
+                                            x: 560,
+                                            y: 420,
                                             year: "2014",
                                             label: "LAUNCH OMS BRAND TO THE SRILANKA MARKET",
                                         },
                                         {
-                                            x: 750,
-                                            y: 375,
+                                            x: 700,
+                                            y: 390,
                                             year: "2015",
                                             label: "START DEALER NETWORK OPERATION",
                                         },
                                         {
-                                            x: 900,
-                                            y: 320,
+                                            x: 820,
+                                            y: 355,
                                             year: "2016",
                                             label: "LAUNCH THE ONESAM BRAND",
                                         },
                                         {
-                                            x: 1030,
-                                            y: 250,
+                                            x: 930,
+                                            y: 305,
                                             year: "2019",
                                             label: "MANUFACTURING PLANT STARTED",
                                         },
                                         {
-                                            x: 1150,
-                                            y: 150,
+                                            x: 1020,
+                                            y: 255,
                                             year: "2020",
                                             label: "EXPLORE INDONESIAN MARKET",
                                         },
                                         {
-                                            x: 1170,
-                                            y: 140,
+                                            x: 1142,
+                                            y: 160,
                                             year: "2022",
                                             label: "EXPLORE UAE MARKET",
                                         },
@@ -555,13 +572,14 @@ export default function Home() {
                                                 <circle
                                                     cx={milestone.x}
                                                     cy={milestone.y}
-                                                    r="12"
+                                                    r="10"
                                                     className="fill-blue-200 stroke-blue-200 stroke-2 cursor-pointer group hover:fill-blue-500 hover:stroke-blue-400 hover:cursor-pointer duration-200 ease-in-out"
+                                                    style={{ filter: "drop-shadow(0 0 6px #3B82F6)" }}
                                                 />
                                                 {/* Year */}
                                                 <text
                                                     x={milestone.x}
-                                                    y={milestone.y - 15}
+                                                    y={milestone.y + 45}
                                                     textAnchor="middle"
                                                     className="fill-blue-700 text-sm font-semibold"
                                                 >

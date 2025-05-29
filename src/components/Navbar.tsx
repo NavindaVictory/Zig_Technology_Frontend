@@ -1,7 +1,7 @@
-"use client"
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,11 +12,11 @@ const Navbar = () => {
     };
 
     const menuItems = [
-        { name: 'Home', path: '/' },
-        { name: 'About us', path: '/' },
-        { name: 'Our Brands', path: '/pages/brands' },
-        { name: 'Production', path: '/pages/production' },
-        { name: 'Contact Us', path: '/pages/contact' },
+        { name: "Home", path: "/" },
+        { name: "About us", path: "/" },
+        { name: "Our Brands", path: "/pages/brands" },
+        { name: "Production", path: "/pages/production" },
+        { name: "Contact Us", path: "/pages/contact" },
     ];
 
     useEffect(() => {
@@ -27,26 +27,30 @@ const Navbar = () => {
                 setScrolling(false);
             }
         };
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener("scroll", handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener("scroll", handleScroll);
         };
     }, []);
 
     return (
-        <nav className={` z-100 fixed top-0 left-0 w-full transition-all duration-300 ${scrolling ? 'bg-blue-500 opacity-70' : 'bg-transparent'}`}>
+        <nav
+            className={` z-100 fixed top-0 left-0 w-full transition-all duration-300 ${scrolling ? "bg-blue-500 opacity-70" : "bg-transparent"
+                }`}
+        >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16">
                     <div className="flex items-center">
                         <Link href="/" className="flex-shrink-0">
                             <div
-                                className={`relative w-96 h-24 bg-white rounded-bl-3xl rounded-br-3xl ${scrolling ? 'opacity-0' : ''} flex items-center justify-center`}
+                                className={`relative bg-white rounded-bl-3xl rounded-br-3xl ${scrolling ? "opacity-0" : ""
+                                    }  items-center justify-center hidden sm:flex sm:w-48 sm:h-16 md:w-64 md:h-20 lg:w-80 lg:h-24`}
                             >
                                 <Image
                                     src="/images/Web site images-04.png"
                                     alt="Zigo Technology Logo"
                                     height={200}
-                                    width={500}
+                                    width={300}
                                     className="object-contain"
                                     priority
                                 />
@@ -54,18 +58,17 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-
-                    {/* Desktop menu */}
-                    <div className="hidden md:flex items-center space-x-4">
+                    {/* Desktop menu - responsive spacing and sizing for tablets */}
+                    <div className="hidden md:flex items-center space-x-1 lg:space-x-4">
                         {menuItems.map((item) => (
                             <Link
                                 key={item.name}
                                 href={item.path}
-                                className="text-white text-[0.95rem] hover:text-blue-200 px-3 py-2 flex items-center"
+                                className="text-white text-xs md:text-sm lg:text-[0.95rem] hover:text-blue-200 px-1 md:px-2 lg:px-3 py-2 flex items-center whitespace-nowrap"
                             >
                                 {item.name}
                                 <svg
-                                    className="w-4 h-4 ml-1"
+                                    className="w-3 h-3 md:w-4 md:h-4 ml-0.5 md:ml-1"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -82,7 +85,7 @@ const Navbar = () => {
                         ))}
                     </div>
 
-                    {/* Mobile menu button */}
+                    {/* Mobile menu button - only for small screens */}
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={toggleMenu}
@@ -91,7 +94,7 @@ const Navbar = () => {
                         >
                             <span className="sr-only">Open main menu</span>
                             <svg
-                                className={`${isOpen ? 'hidden' : 'block'} h-6 w-6`}
+                                className={`${isOpen ? "hidden" : "block"} h-6 w-6`}
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
@@ -106,7 +109,7 @@ const Navbar = () => {
                                 />
                             </svg>
                             <svg
-                                className={`${isOpen ? 'block' : 'hidden'} h-6 w-6`}
+                                className={`${isOpen ? "block" : "hidden"} h-6 w-6`}
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
@@ -125,9 +128,9 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile menu, show/hide */}
-            <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {/* Mobile menu, show/hide - only for small screens */}
+            <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
+                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-800 bg-opacity-90">
                     {menuItems.map((item) => (
                         <Link
                             key={item.name}
